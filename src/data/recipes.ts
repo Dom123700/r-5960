@@ -1,4 +1,3 @@
-
 export interface Recipe {
   id: string;
   name: string;
@@ -281,6 +280,310 @@ export const recipes: Recipe[] = [
       "Pour 1/4 cup of batter onto the griddle for each pancake.",
       "Cook until bubbles form on the surface, about 2-3 minutes, then flip and cook for another 1-2 minutes until golden brown.",
       "Serve warm with maple syrup and garnish with extra blueberries and lemon slices."
+    ]
+  },
+  // --- New Polish Recipes ---
+  {
+    id: "9",
+    name: "Classic Polish Pierogi",
+    description: "Traditional Polish dumplings filled with a blend of potato and farmer’s cheese, served with a rich onion-butter sauce.",
+    image: "https://via.placeholder.com/300?text=Classic+Polish+Pierogi",
+    cookTime: 90,
+    prepTime: 30,
+    servings: 4,
+    difficulty: "Medium",
+    categories: ["Dinner"],
+    ingredients: [
+      "500g all-purpose flour",
+      "1/2 tsp salt",
+      "2 large eggs",
+      "250ml warm water",
+      "400g potatoes, boiled and mashed",
+      "200g farmer’s cheese",
+      "1 large onion, thinly sliced",
+      "Salt and pepper to taste",
+      "2 tbsp butter"
+    ],
+    instructions: [
+      "In a bowl, mix the flour, salt, eggs, and warm water until a smooth dough forms; cover and let rest for 30 minutes.",
+      "Combine the mashed potatoes with farmer’s cheese; season with salt and pepper.",
+      "Roll the dough thinly on a floured surface and cut into circles about 7-8cm in diameter.",
+      "Place a spoonful of filling in the center of each circle, fold over, and press the edges firmly to seal.",
+      "Bring a large pot of salted water to boil and cook the pierogi in batches until they float to the surface.",
+      "Meanwhile, sauté the onions in butter until golden brown.",
+      "Serve the boiled pierogi drizzled with the caramelized onions."
+    ]
+  },
+  {
+    id: "10",
+    name: "Hearty Polish Bigos",
+    description: "A robust hunter’s stew with sauerkraut, fresh cabbage, assorted meats, and a blend of spices that deepen in flavor.",
+    image: "https://via.placeholder.com/300?text=Hearty+Polish+Bigos",
+    cookTime: 120,
+    prepTime: 20,
+    servings: 6,
+    difficulty: "Hard",
+    categories: ["Dinner"],
+    ingredients: [
+      "500g sauerkraut, rinsed",
+      "300g fresh cabbage, shredded",
+      "200g pork shoulder, cubed",
+      "200g smoked sausage, sliced",
+      "150g beef, cubed",
+      "1 large onion, chopped",
+      "2 garlic cloves, minced",
+      "1 cup red wine",
+      "1 bay leaf",
+      "5 juniper berries",
+      "1 tsp paprika",
+      "Salt and pepper to taste",
+      "2 tbsp vegetable oil"
+    ],
+    instructions: [
+      "Heat oil in a large pot and brown the pork, beef, and sausage until all sides are seared.",
+      "Add chopped onion and garlic, cooking until softened.",
+      "Stir in the sauerkraut and fresh cabbage, then pour in the red wine.",
+      "Season with bay leaf, juniper berries, paprika, salt, and pepper.",
+      "Bring to a simmer, cover, and let cook for at least 2 hours, stirring occasionally.",
+      "Adjust seasoning before serving."
+    ]
+  },
+  {
+    id: "11",
+    name: "Traditional Polish Żurek",
+    description: "A tangy sour rye soup enriched with sausage, boiled eggs, and aromatic herbs—perfect for a chilly day.",
+    image: "https://via.placeholder.com/300?text=Traditional+Polish+Żurek",
+    cookTime: 60,
+    prepTime: 10,
+    servings: 4,
+    difficulty: "Medium",
+    categories: ["Soup"],
+    ingredients: [
+      "1 liter sour rye starter (zakwas)",
+      "500ml water or light broth",
+      "200g smoked sausage, sliced",
+      "4 hard-boiled eggs",
+      "1 large onion, diced",
+      "2 garlic cloves, minced",
+      "1 tsp marjoram",
+      "Salt and pepper to taste",
+      "1 tbsp vegetable oil"
+    ],
+    instructions: [
+      "Heat oil in a pot and sauté the onion and garlic until translucent.",
+      "Add the sausage slices and fry for a few minutes until they begin to crisp.",
+      "Pour in the water or broth and bring to a simmer.",
+      "Stir in the sour rye starter and marjoram; season with salt and pepper.",
+      "Let the soup simmer for 20 minutes, then serve with halved boiled eggs."
+    ]
+  },
+  {
+    id: "12",
+    name: "Polish Placki Ziemniaczane",
+    description: "Crispy potato pancakes with a golden crust, served with sour cream or apple sauce.",
+    image: "https://via.placeholder.com/300?text=Polish+Placki+Ziemniaczane",
+    cookTime: 40,
+    prepTime: 15,
+    servings: 4,
+    difficulty: "Easy",
+    categories: ["Appetizer"],
+    ingredients: [
+      "500g potatoes, peeled and grated",
+      "1 medium onion, grated",
+      "2 large eggs",
+      "3 tbsp all-purpose flour",
+      "Salt and pepper to taste",
+      "Oil for frying",
+      "Sour cream or apple sauce, for serving"
+    ],
+    instructions: [
+      "Squeeze the excess moisture from the grated potatoes and onion.",
+      "Mix the potatoes, onion, eggs, and flour in a bowl; season with salt and pepper.",
+      "Heat oil in a frying pan over medium heat.",
+      "Spoon a portion of the mixture into the pan and flatten gently into a pancake.",
+      "Fry until golden brown on both sides (about 3-4 minutes per side).",
+      "Drain on paper towels and serve with sour cream or apple sauce."
+    ]
+  },
+  {
+    id: "13",
+    name: "Polish Gołąbki",
+    description: "Tender cabbage rolls stuffed with a savory mix of minced meat and rice, simmered in a rich tomato sauce.",
+    image: "https://via.placeholder.com/300?text=Polish+Gołąbki",
+    cookTime: 75,
+    prepTime: 20,
+    servings: 6,
+    difficulty: "Medium",
+    categories: ["Dinner"],
+    ingredients: [
+      "1 large head of cabbage",
+      "500g ground pork or beef",
+      "100g rice, cooked",
+      "1 large onion, finely chopped",
+      "2 garlic cloves, minced",
+      "400ml tomato puree",
+      "1 cup beef or vegetable broth",
+      "Salt and pepper to taste",
+      "1 tsp dried thyme",
+      "1 tbsp vegetable oil"
+    ],
+    instructions: [
+      "Core the cabbage and carefully separate the leaves. Blanch them in boiling water for 5 minutes until pliable.",
+      "In a bowl, combine the ground meat, cooked rice, chopped onion, garlic, salt, and pepper.",
+      "Place a spoonful of the filling on each cabbage leaf and roll tightly.",
+      "Heat oil in a large pot and arrange the cabbage rolls seam-side down.",
+      "Pour the tomato puree and broth over the rolls, then sprinkle with dried thyme.",
+      "Cover and simmer for about 45 minutes until the cabbage is tender and the flavors meld."
+    ]
+  },
+  {
+    id: "14",
+    name: "Polish Kopytka",
+    description: "Soft, pillowy potato dumplings that serve as a comforting side dish or a hearty main course when tossed in a creamy sauce.",
+    image: "https://via.placeholder.com/300?text=Polish+Kopytka",
+    cookTime: 45,
+    prepTime: 15,
+    servings: 4,
+    difficulty: "Easy",
+    categories: ["Side Dish"],
+    ingredients: [
+      "600g boiled potatoes, mashed",
+      "200g all-purpose flour (plus extra for dusting)",
+      "1 egg",
+      "Salt to taste",
+      "2 tbsp butter",
+      "Fresh parsley, chopped (optional)"
+    ],
+    instructions: [
+      "Mix the mashed potatoes, egg, flour, and salt until a soft dough forms.",
+      "On a floured surface, roll the dough into a log about 2cm thick.",
+      "Cut the log into 2cm pieces and gently press each piece with a fork.",
+      "Boil a large pot of salted water and cook the dumplings until they float to the top.",
+      "Drain and toss with melted butter and chopped parsley before serving."
+    ]
+  },
+  {
+    id: "15",
+    name: "Polish Barszcz Czerwony (Red Beet Soup)",
+    description: "A vibrant and earthy beet soup that is both refreshing and deeply flavored, traditionally served with a dollop of sour cream.",
+    image: "https://via.placeholder.com/300?text=Polish+Barszcz+Czerwony",
+    cookTime: 60,
+    prepTime: 10,
+    servings: 4,
+    difficulty: "Easy",
+    categories: ["Soup"],
+    ingredients: [
+      "500g beets, peeled and diced",
+      "1 large onion, chopped",
+      "2 garlic cloves, minced",
+      "1 liter vegetable broth",
+      "2 tbsp lemon juice",
+      "Salt and pepper to taste",
+      "1 tbsp olive oil",
+      "Sour cream, for garnish"
+    ],
+    instructions: [
+      "Heat olive oil in a large pot and sauté the chopped onion and garlic until soft.",
+      "Add the diced beets and cook for about 5 minutes, stirring occasionally.",
+      "Pour in the vegetable broth and bring to a simmer; cook until the beets are tender (about 40 minutes).",
+      "Stir in lemon juice, salt, and pepper.",
+      "Serve hot with a spoonful of sour cream on top."
+    ]
+  },
+  {
+    id: "16",
+    name: "Creamy Polish Sernik (Cheesecake)",
+    description: "A light and creamy cheesecake with a buttery crust and a tangy twist from traditional Polish farmer’s cheese.",
+    image: "https://via.placeholder.com/300?text=Creamy+Polish+Sernik",
+    cookTime: 75,
+    prepTime: 15,
+    servings: 8,
+    difficulty: "Medium",
+    categories: ["Dessert"],
+    ingredients: [
+      "250g digestive biscuits, crushed",
+      "100g unsalted butter, melted",
+      "500g farmer’s cheese",
+      "250g cream cheese",
+      "200g sugar",
+      "3 large eggs",
+      "1 tsp vanilla extract",
+      "Zest of 1 lemon"
+    ],
+    instructions: [
+      "Mix the crushed biscuits with the melted butter and press the mixture firmly into the base of a springform pan.",
+      "Beat together the farmer’s cheese, cream cheese, and sugar until smooth.",
+      "Add the eggs one at a time, then stir in the vanilla extract and lemon zest.",
+      "Pour the filling over the crust and smooth the top.",
+      "Bake in a preheated oven at 170°C (340°F) for about 55 minutes or until set.",
+      "Cool completely and chill in the refrigerator for at least 4 hours before serving."
+    ]
+  },
+  {
+    id: "17",
+    name: "Traditional Polish Pączki",
+    description: "Fluffy, deep-fried doughnuts filled with a sweet jam and dusted with powdered sugar for a delightfully indulgent treat.",
+    image: "https://via.placeholder.com/300?text=Traditional+Polish+Pączki",
+    cookTime: 120,
+    prepTime: 30,
+    servings: 12,
+    difficulty: "Hard",
+    categories: ["Dessert"],
+    ingredients: [
+      "500g all-purpose flour",
+      "50g sugar",
+      "1/2 tsp salt",
+      "2 tsp instant yeast",
+      "200ml warm milk",
+      "4 egg yolks",
+      "100g unsalted butter, softened",
+      "Zest of 1 orange",
+      "1 tsp vanilla extract",
+      "Jam of your choice (e.g., rose hip or plum)",
+      "Powdered sugar for dusting",
+      "Oil for deep frying"
+    ],
+    instructions: [
+      "Dissolve the yeast in warm milk with a pinch of sugar; let stand for 5 minutes.",
+      "Mix the flour, remaining sugar, salt, egg yolks, butter, orange zest, and vanilla extract in a large bowl.",
+      "Add the yeast mixture and knead into a smooth, elastic dough. Cover and let rise for 1 hour.",
+      "Roll out the dough to 1cm thickness and cut rounds using a cookie cutter.",
+      "Place a small dollop of jam in the center of each round, fold over, and seal the edges carefully.",
+      "Allow the pączki to rest for another 30 minutes before deep frying in oil heated to around 175°C until golden brown.",
+      "Drain on paper towels and dust generously with powdered sugar."
+    ]
+  },
+  {
+    id: "18",
+    name: "Polish Makowiec (Poppy Seed Roll)",
+    description: "A festive yeast roll swirled with a rich, aromatic poppy seed filling, perfect for celebrations or a sweet treat any day.",
+    image: "https://via.placeholder.com/300?text=Polish+Makowiec",
+    cookTime: 150,
+    prepTime: 30,
+    servings: 10,
+    difficulty: "Medium",
+    categories: ["Dessert"],
+    ingredients: [
+      "500g all-purpose flour",
+      "2 tsp dry yeast",
+      "100ml warm milk",
+      "80g sugar",
+      "2 large eggs",
+      "100g unsalted butter, melted",
+      "A pinch of salt",
+      "300g poppy seed filling (ground poppy seeds, honey, raisins, and lemon zest)",
+      "Powdered sugar for dusting"
+    ],
+    instructions: [
+      "Combine warm milk, yeast, and a teaspoon of sugar in a bowl; let it activate for 10 minutes.",
+      "Mix the flour, remaining sugar, eggs, melted butter, and salt to form a smooth dough; knead until elastic.",
+      "Cover the dough and let it rise for 1 hour until doubled in size.",
+      "Roll the dough into a rectangle on a floured surface.",
+      "Evenly spread the poppy seed filling over the dough, leaving a small border at the edges.",
+      "Roll up the dough tightly along the longer side and pinch the seam to seal.",
+      "Place the roll on a baking tray, cover, and let rise for another 30 minutes.",
+      "Bake at 180°C (350°F) for 30-35 minutes until golden.",
+      "Cool and dust with powdered sugar before slicing."
     ]
   }
 ];
