@@ -5,6 +5,8 @@ import { cn } from '@/lib/utils';
 interface CategoryChipProps {
   category: string;
   className?: string;
+  onClick?: () => void;
+  style?: React.CSSProperties;
 }
 
 const categoryColors: Record<string, string> = {
@@ -21,7 +23,7 @@ const categoryColors: Record<string, string> = {
   quick: 'bg-amber-100 text-amber-800 hover:bg-amber-200',
 };
 
-export const CategoryChip: React.FC<CategoryChipProps> = ({ category, className }) => {
+export const CategoryChip: React.FC<CategoryChipProps> = ({ category, className, onClick, style }) => {
   const formattedCategory = category.toLowerCase().replace(/\s+/g, '_');
   
   const colorClass = categoryColors[formattedCategory] || 'bg-gray-100 text-gray-800 hover:bg-gray-200';
@@ -32,11 +34,15 @@ export const CategoryChip: React.FC<CategoryChipProps> = ({ category, className 
     .join(' ');
   
   return (
-    <span className={cn(
-      'category-chip', 
-      colorClass,
-      className
-    )}>
+    <span 
+      className={cn(
+        'category-chip cursor-pointer transition-all', 
+        colorClass,
+        className
+      )}
+      onClick={onClick}
+      style={style}
+    >
       {displayName}
     </span>
   );

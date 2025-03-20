@@ -4,19 +4,20 @@ import { Layout } from '@/components/Layout';
 import { CategoryChip } from '@/components/CategoryChip';
 import { categories } from '@/data/recipes';
 import { Link } from 'react-router-dom';
+import { BookOpen } from 'lucide-react';
 
 const Categories = () => {
   return (
     <Layout>
-      <div className="max-w-4xl mx-auto py-6 animate-fade-in">
-        <div className="text-center mb-10">
-          <h1 className="text-3xl font-bold mb-4">Recipe Categories</h1>
-          <p className="text-muted-foreground">
-            Browse our recipe collection by category to find the perfect dish
+      <div className="max-w-5xl mx-auto py-10 animate-fade-in">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4">Recipe Categories</h1>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Browse our recipe collection by category to find the perfect dish for any occasion
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category, index) => (
             <Link 
               key={category} 
@@ -24,9 +25,12 @@ const Categories = () => {
               className="animate-scale-in" 
               style={{ animationDelay: `${index * 50}ms` }}
             >
-              <div className="border border-border/50 rounded-xl p-6 text-center transition-all hover:border-primary/20 hover:shadow-md hover:bg-accent/50">
+              <div className="border border-border/50 rounded-xl p-8 text-center transition-all hover:border-primary/30 hover:shadow-lg hover:bg-accent/50 flex flex-col items-center justify-center h-full">
+                <div className="bg-primary/10 rounded-full p-4 mb-4">
+                  <BookOpen className="h-8 w-8 text-primary" />
+                </div>
                 <CategoryChip category={category} className="mb-3 mx-auto" />
-                <h2 className="text-lg font-medium">{category}</h2>
+                <h2 className="text-xl font-medium mt-2">{category}</h2>
               </div>
             </Link>
           ))}
