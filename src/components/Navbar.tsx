@@ -28,7 +28,6 @@ export const Navbar: React.FC = () => {
   const navItems = [
     { name: 'Home', path: '/', icon: <Home size={18} /> },
     { name: 'Categories', path: '/categories', icon: <Tag size={18} /> },
-    { name: 'Search', path: '/search', icon: <Search size={18} /> },
   ];
 
   return (
@@ -38,7 +37,7 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center gap-2">
               <BookOpen className="h-6 w-6 text-primary" />
-              <span className="font-semibold text-lg">Recipe Collection</span>
+              <span className="font-semibold text-lg">Mama's Recipes</span>
             </Link>
           </div>
 
