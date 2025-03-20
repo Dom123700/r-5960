@@ -38,10 +38,10 @@ export const SearchBar: React.FC<SearchBarProps> = ({
         className
       )}
     >
-      <div className="relative w-full">
+      <div className="relative w-full group">
         <Search 
           size={18} 
-          className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" 
+          className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground group-hover:text-primary transition-colors" 
         />
         
         <Input
@@ -49,7 +49,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={placeholder}
-          className="w-full pl-10 pr-10 py-6 rounded-full border-muted bg-white/80 focus-visible:ring-primary shadow-sm"
+          className="w-full pl-12 pr-10 py-6 rounded-full border-border/50 bg-white/90 backdrop-blur-sm shadow-md focus-visible:ring-primary hover:border-primary/30 transition-all"
         />
         
         {query && (
@@ -57,7 +57,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
             type="button"
             variant="ghost"
             size="sm"
-            className="absolute right-3 top-1/2 -translate-y-1/2 h-6 w-6 p-0 text-muted-foreground"
+            className="absolute right-3 top-1/2 -translate-y-1/2 h-8 w-8 p-0 text-muted-foreground hover:text-destructive rounded-full"
             onClick={clearSearch}
           >
             <X size={16} />
@@ -68,7 +68,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
       
       <Button 
         type="submit"
-        className="ml-2 rounded-full px-6 bg-primary hover:bg-primary/90"
+        className="ml-3 rounded-full px-7 py-6 bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg"
       >
         Search
       </Button>

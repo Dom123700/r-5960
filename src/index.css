@@ -5,35 +5,35 @@
 
 @layer base {
   :root {
-    --background: 220 25% 97%;
-    --foreground: 222 47% 11.2%;
+    --background: 255 35% 98%;
+    --foreground: 265 25% 15%;
     
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11.2%;
+    --card-foreground: 265 25% 15%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11.2%;
+    --popover-foreground: 265 25% 15%;
     
-    --primary: 320 70% 50%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 255 65% 55%;
+    --primary-foreground: 210 40% 98%;
     
-    --secondary: 240 10% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 265 50% 95%;
+    --secondary-foreground: 265 50% 45%;
     
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 245 10% 92%;
+    --muted-foreground: 265 10% 45%;
     
-    --accent: 320 80% 96%;
-    --accent-foreground: 320 70% 40%;
+    --accent: 265 80% 95%;
+    --accent-foreground: 265 70% 50%;
     
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 320 70% 50%;
+    --border: 265 15% 90%;
+    --input: 265 15% 90%;
+    --ring: 255 65% 55%;
 
-    --radius: 1.2rem;
+    --radius: 1.5rem;
   }
 
   * {
@@ -49,7 +49,11 @@
   /* Custom smooth scroll behavior */
   html {
     scroll-behavior: smooth;
-    --bg-pattern: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23F1A5B3' fill-opacity='0.07'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    --bg-pattern: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a78bfa' fill-opacity='0.07'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
   }
   
   /* Custom scrollbar */
@@ -63,7 +67,7 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    @apply bg-primary/20 rounded-full hover:bg-primary/40 transition-colors;
+    @apply bg-primary/30 rounded-full hover:bg-primary/50 transition-colors;
   }
   
   /* Smooth transitions for all interactive elements */
@@ -73,7 +77,7 @@
   
   /* Glass effect for certain components */
   .glass {
-    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-sm;
+    @apply bg-white/70 backdrop-blur-md border border-white/30 shadow-md;
   }
 }
 
@@ -100,20 +104,25 @@
 
 /* Card hover effect */
 .card-hover {
-  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  @apply transition-all duration-300 ease-out hover:shadow-lg hover:-translate-y-1 hover:border-primary/30;
+  box-shadow: 0 10px 40px -15px rgba(0, 0, 0, 0.05);
+}
+
+.card-hover:hover {
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
 }
 
 /* Custom recipe card layout */
 .recipe-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.75rem;
+  gap: 2rem;
   width: 100%;
 }
 
 /* Category chip styles */
 .category-chip {
-  @apply inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium;
+  @apply inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium shadow-sm;
   transition: all 0.2s ease;
 }
 
@@ -134,16 +143,16 @@
 
 .page-header::before {
   content: '';
-  @apply absolute top-0 left-0 w-16 h-1 bg-primary rounded-full;
+  @apply absolute top-0 left-0 w-24 h-1 bg-primary rounded-full;
 }
 
 /* Hero section styling */
 .hero-section {
-  @apply relative overflow-hidden bg-gradient-to-r from-accent to-accent/30 rounded-3xl shadow-lg;
+  @apply relative overflow-hidden bg-gradient-to-r from-accent/80 to-secondary rounded-3xl shadow-lg border border-secondary/60;
 }
 
 .hero-content {
-  @apply relative z-10 py-12 px-6;
+  @apply relative z-10 py-16 px-6;
 }
 
 .hero-pattern {
@@ -158,5 +167,40 @@
 
 .wave-divider::before {
   content: '';
-  @apply absolute w-[200%] h-[100px] left-[-50%] rounded-[100%] bg-background;
+  @apply absolute w-[200%] h-[150px] left-[-50%] rounded-[100%] bg-accent/50;
+}
+
+/* Shimmer effect for loading states */
+.shimmer {
+  @apply relative overflow-hidden;
+}
+
+.shimmer::before {
+  content: '';
+  @apply absolute inset-0 z-10;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Modern button styles */
+.btn-modern {
+  @apply relative overflow-hidden rounded-full px-6 py-3 font-medium transition-all;
+}
+
+.btn-modern::before {
+  content: '';
+  @apply absolute inset-0 opacity-0 transition-all duration-300 ease-out;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+  transform: scale(0);
+}
+
+.btn-modern:hover::before {
+  @apply opacity-100;
+  transform: scale(2);
 }

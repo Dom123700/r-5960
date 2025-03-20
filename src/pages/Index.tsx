@@ -7,7 +7,7 @@ import { CategoryChip } from '@/components/CategoryChip';
 import { SearchBar } from '@/components/SearchBar';
 import { Button } from '@/components/ui/button';
 import { recipes, categories } from '@/data/recipes';
-import { ChefHat, Fire, Clock, Award } from 'lucide-react';
+import { ChefHat, Flame, Clock, Award } from 'lucide-react';
 
 const Index = () => {
   const [featuredCategory, setFeaturedCategory] = useState<string | null>(null);
@@ -90,7 +90,7 @@ const Index = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-3">
               <div className="p-2 rounded-lg bg-accent/80">
-                <Fire className="h-5 w-5 text-primary" />
+                <Flame className="h-5 w-5 text-primary" />
               </div>
               <h2 className="text-2xl font-bold">
                 {featuredCategory ? `${featuredCategory} Recipes` : 'Recipe Collection'}
