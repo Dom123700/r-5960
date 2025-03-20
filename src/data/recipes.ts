@@ -292,7 +292,7 @@ export const recipes: Recipe[] = [
     prepTime: 30,
     servings: 4,
     difficulty: "Medium",
-    categories: ["Dinner"],
+    categories: ["Dinner", "Polish"],
     ingredients: [
       "500g all-purpose flour",
       "1/2 tsp salt",
@@ -323,7 +323,7 @@ export const recipes: Recipe[] = [
     prepTime: 20,
     servings: 6,
     difficulty: "Hard",
-    categories: ["Dinner"],
+    categories: ["Dinner", "Polish"],
     ingredients: [
       "500g sauerkraut, rinsed",
       "300g fresh cabbage, shredded",
@@ -357,7 +357,7 @@ export const recipes: Recipe[] = [
     prepTime: 10,
     servings: 4,
     difficulty: "Medium",
-    categories: ["Soup"],
+    categories: ["Soup", "Polish"],
     ingredients: [
       "1 liter sour rye starter (zakwas)",
       "500ml water or light broth",
@@ -386,7 +386,7 @@ export const recipes: Recipe[] = [
     prepTime: 15,
     servings: 4,
     difficulty: "Easy",
-    categories: ["Appetizer"],
+    categories: ["Appetizer", "Polish"],
     ingredients: [
       "500g potatoes, peeled and grated",
       "1 medium onion, grated",
@@ -414,7 +414,7 @@ export const recipes: Recipe[] = [
     prepTime: 20,
     servings: 6,
     difficulty: "Medium",
-    categories: ["Dinner"],
+    categories: ["Dinner", "Polish"],
     ingredients: [
       "1 large head of cabbage",
       "500g ground pork or beef",
@@ -445,7 +445,7 @@ export const recipes: Recipe[] = [
     prepTime: 15,
     servings: 4,
     difficulty: "Easy",
-    categories: ["Side Dish"],
+    categories: ["Side Dish", "Polish"],
     ingredients: [
       "600g boiled potatoes, mashed",
       "200g all-purpose flour (plus extra for dusting)",
@@ -471,7 +471,7 @@ export const recipes: Recipe[] = [
     prepTime: 10,
     servings: 4,
     difficulty: "Easy",
-    categories: ["Soup"],
+    categories: ["Soup", "Polish"],
     ingredients: [
       "500g beets, peeled and diced",
       "1 large onion, chopped",
@@ -499,7 +499,7 @@ export const recipes: Recipe[] = [
     prepTime: 15,
     servings: 8,
     difficulty: "Medium",
-    categories: ["Dessert"],
+    categories: ["Dessert", "Polish"],
     ingredients: [
       "250g digestive biscuits, crushed",
       "100g unsalted butter, melted",
@@ -528,7 +528,7 @@ export const recipes: Recipe[] = [
     prepTime: 30,
     servings: 12,
     difficulty: "Hard",
-    categories: ["Dessert"],
+    categories: ["Dessert", "Polish"],
     ingredients: [
       "500g all-purpose flour",
       "50g sugar",
@@ -562,7 +562,7 @@ export const recipes: Recipe[] = [
     prepTime: 30,
     servings: 10,
     difficulty: "Medium",
-    categories: ["Dessert"],
+    categories: ["Dessert", "Polish"],
     ingredients: [
       "500g all-purpose flour",
       "2 tsp dry yeast",
