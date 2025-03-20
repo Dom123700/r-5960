@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
+    --background: 220 25% 97%;
     --foreground: 222 47% 11.2%;
     
     --card: 0 0% 100%;
@@ -14,26 +14,26 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11.2%;
     
-    --primary: 221 83% 53%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 320 70% 50%;
+    --primary-foreground: 0 0% 98%;
     
-    --secondary: 210 40% 96.1%;
+    --secondary: 240 10% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
     
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
     
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 320 80% 96%;
+    --accent-foreground: 320 70% 40%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 221 83% 53%;
+    --ring: 320 70% 50%;
 
-    --radius: 1rem;
+    --radius: 1.2rem;
   }
 
   * {
@@ -43,18 +43,19 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-image: var(--bg-pattern);
   }
   
   /* Custom smooth scroll behavior */
   html {
     scroll-behavior: smooth;
+    --bg-pattern: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23F1A5B3' fill-opacity='0.07'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
   
   /* Custom scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
   }
   
   ::-webkit-scrollbar-track {
@@ -62,7 +63,7 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    @apply bg-muted rounded-full hover:bg-muted-foreground/30 transition-colors;
+    @apply bg-primary/20 rounded-full hover:bg-primary/40 transition-colors;
   }
   
   /* Smooth transitions for all interactive elements */
@@ -105,8 +106,8 @@
 /* Custom recipe card layout */
 .recipe-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.75rem;
   width: 100%;
 }
 
@@ -134,4 +135,28 @@
 .page-header::before {
   content: '';
   @apply absolute top-0 left-0 w-16 h-1 bg-primary rounded-full;
+}
+
+/* Hero section styling */
+.hero-section {
+  @apply relative overflow-hidden bg-gradient-to-r from-accent to-accent/30 rounded-3xl shadow-lg;
+}
+
+.hero-content {
+  @apply relative z-10 py-12 px-6;
+}
+
+.hero-pattern {
+  @apply absolute inset-0 z-0 opacity-30;
+  background-image: var(--bg-pattern);
+}
+
+/* Curved section dividers */
+.wave-divider {
+  @apply w-full h-24 relative overflow-hidden;
+}
+
+.wave-divider::before {
+  content: '';
+  @apply absolute w-[200%] h-[100px] left-[-50%] rounded-[100%] bg-background;
 }
