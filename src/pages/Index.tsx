@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { recipes, categories } from '@/data/recipes';
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command';
 import { ChefHat, Flame, Clock, Award, Search, UtensilsCrossed, ChevronRight } from 'lucide-react';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 const Index = () => {
   const [featuredCategory, setFeaturedCategory] = useState<string | null>(null);
@@ -97,27 +98,31 @@ const Index = () => {
           </div>
         </div>
         
-        {/* Command menu for search */}
-        <Command open={isCommandOpen} onOpenChange={setIsCommandOpen} className="rounded-lg border shadow-md">
-          <CommandInput placeholder="Search for recipes, ingredients..." />
-          <CommandList>
-            <CommandEmpty>No results found.</CommandEmpty>
-            <CommandGroup heading="Quick Suggestions">
-              {["Pasta", "Chicken", "Vegetarian", "Dessert", "30-minute meals"].map(item => (
-                <CommandItem 
-                  key={item}
-                  onSelect={() => {
-                    setIsCommandOpen(false);
-                    window.location.href = `/search?q=${encodeURIComponent(item)}`;
-                  }}
-                >
-                  <Search className="mr-2 h-4 w-4" />
-                  <span>{item}</span>
-                </CommandItem>
-              ))}
-            </CommandGroup>
-          </CommandList>
-        </Command>
+        {/* Command menu for search, wrapped in a Dialog */}
+        <Dialog open={isCommandOpen} onOpenChange={setIsCommandOpen}>
+          <DialogContent className="p-0 gap-0 border-none max-w-2xl">
+            <Command className="rounded-lg">
+              <CommandInput placeholder="Search for recipes, ingredients..." />
+              <CommandList>
+                <CommandEmpty>No results found.</CommandEmpty>
+                <CommandGroup heading="Quick Suggestions">
+                  {["Pasta", "Chicken", "Vegetarian", "Dessert", "30-minute meals"].map(item => (
+                    <CommandItem 
+                      key={item}
+                      onSelect={() => {
+                        setIsCommandOpen(false);
+                        window.location.href = `/search?q=${encodeURIComponent(item)}`;
+                      }}
+                    >
+                      <Search className="mr-2 h-4 w-4" />
+                      <span>{item}</span>
+                    </CommandItem>
+                  ))}
+                </CommandGroup>
+              </CommandList>
+            </Command>
+          </DialogContent>
+        </Dialog>
         
         {/* Featured Recipes Section */}
         <div className="space-y-6">
