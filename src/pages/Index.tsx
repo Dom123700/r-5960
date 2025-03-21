@@ -1,12 +1,12 @@
 
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Layout } from '@/components/Layout';
 import { RecipeCard } from '@/components/RecipeCard';
 import { CategoryChip } from '@/components/CategoryChip';
 import { SearchBar } from '@/components/SearchBar';
 import { Button } from '@/components/ui/button';
-import { recipes, categories } from '@/data/recipes';
+import { recipes, categories, searchRecipes } from '@/data/recipes';
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command';
 import { ChefHat, Flame, Clock, Award, Search, UtensilsCrossed, ChevronRight } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
@@ -14,6 +14,9 @@ import { Dialog, DialogContent } from '@/components/ui/dialog';
 const Index = () => {
   const [featuredCategory, setFeaturedCategory] = useState<string | null>(null);
   const [isCommandOpen, setIsCommandOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState<typeof recipes>([]);
+  const navigate = useNavigate();
   
   const filteredRecipes = featuredCategory
     ? recipes.filter(recipe => 
@@ -25,6 +28,25 @@ const Index = () => {
     
   // Get some featured recipes for the top section
   const featuredRecipes = recipes.slice(0, 3);
+
+  // Update search results whenever search query changes
+  useEffect(() => {
+    if (searchQuery.trim() === '') {
+      setSearchResults([]);
+      return;
+    }
+    
+    const results = searchRecipes(searchQuery);
+    setSearchResults(results.slice(0, 6)); // Limit to 6 results for better UX
+  }, [searchQuery]);
+
+  // Handle command menu search
+  const handleSearch = () => {
+    if (searchQuery.trim()) {
+      setIsCommandOpen(false);
+      navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+    }
+  };
 
   return (
     <Layout>
@@ -52,7 +74,10 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button
                   className="group"
-                  onClick={() => setIsCommandOpen(true)}
+                  onClick={() => {
+                    setSearchQuery('');
+                    setIsCommandOpen(true);
+                  }}
                   size="lg"
                 >
                   <Search size={18} className="mr-2" />
@@ -102,23 +127,93 @@ const Index = () => {
         <Dialog open={isCommandOpen} onOpenChange={setIsCommandOpen}>
           <DialogContent className="p-0 gap-0 border-none max-w-2xl">
             <Command className="rounded-lg">
-              <CommandInput placeholder="Search for recipes, ingredients..." />
+              <CommandInput 
+                placeholder="Search for recipes, ingredients..." 
+                value={searchQuery}
+                onValueChange={setSearchQuery}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    handleSearch();
+                  }
+                }}
+                autoFocus
+              />
               <CommandList>
-                <CommandEmpty>No results found.</CommandEmpty>
-                <CommandGroup heading="Quick Suggestions">
-                  {["Pasta", "Chicken", "Vegetarian", "Dessert", "30-minute meals"].map(item => (
-                    <CommandItem 
-                      key={item}
-                      onSelect={() => {
-                        setIsCommandOpen(false);
-                        window.location.href = `/search?q=${encodeURIComponent(item)}`;
-                      }}
-                    >
-                      <Search className="mr-2 h-4 w-4" />
-                      <span>{item}</span>
-                    </CommandItem>
-                  ))}
-                </CommandGroup>
+                <CommandEmpty>
+                  {searchQuery.trim() ? 'No results found.' : 'Start typing to see suggestions...'}
+                </CommandEmpty>
+                
+                {/* Live Recipe Suggestions */}
+                {searchResults.length > 0 && (
+                  <CommandGroup heading="Recipe Suggestions">
+                    {searchResults.map(recipe => (
+                      <CommandItem 
+                        key={recipe.id}
+                        onSelect={() => {
+                          setIsCommandOpen(false);
+                          navigate(`/recipe/${recipe.id}`);
+                        }}
+                        className="flex items-center gap-3 py-3"
+                      >
+                        <div className="w-10 h-10 rounded-md overflow-hidden flex-shrink-0">
+                          <img src={recipe.image} alt={recipe.name} className="w-full h-full object-cover" />
+                        </div>
+                        <div className="flex flex-col">
+                          <span className="font-medium">{recipe.name}</span>
+                          <span className="text-xs text-muted-foreground">
+                            {recipe.categories?.slice(0, 2).join(', ')}
+                          </span>
+                        </div>
+                      </CommandItem>
+                    ))}
+                    
+                    {searchResults.length > 0 && (
+                      <CommandItem 
+                        onSelect={handleSearch}
+                        className="border-t border-border/30 mt-2 pt-2 text-primary"
+                      >
+                        <Search className="mr-2 h-4 w-4" />
+                        <span>See all results for "{searchQuery}"</span>
+                      </CommandItem>
+                    )}
+                  </CommandGroup>
+                )}
+                
+                {/* Quick Suggestions - only show when no search query */}
+                {searchQuery.trim() === '' && (
+                  <CommandGroup heading="Quick Suggestions">
+                    {["Pasta", "Chicken", "Vegetarian", "Dessert", "30-minute meals"].map(item => (
+                      <CommandItem 
+                        key={item}
+                        onSelect={() => {
+                          setIsCommandOpen(false);
+                          navigate(`/search?q=${encodeURIComponent(item)}`);
+                        }}
+                      >
+                        <Search className="mr-2 h-4 w-4" />
+                        <span>{item}</span>
+                      </CommandItem>
+                    ))}
+                  </CommandGroup>
+                )}
+                
+                {/* Ingredient Suggestions - when typing */}
+                {searchQuery.trim() !== '' && !searchResults.length && (
+                  <CommandGroup heading="Try searching for">
+                    {["ingredient", "cuisine type", "meal type", "dietary restriction"].map(type => (
+                      <CommandItem 
+                        key={type}
+                        onSelect={() => {
+                          setIsCommandOpen(false);
+                          navigate(`/search?q=${encodeURIComponent(searchQuery + " " + type)}`);
+                        }}
+                      >
+                        <Search className="mr-2 h-4 w-4" />
+                        <span>"{searchQuery}" {type}</span>
+                      </CommandItem>
+                    ))}
+                  </CommandGroup>
+                )}
               </CommandList>
             </Command>
           </DialogContent>
