@@ -34,22 +34,21 @@ export const SearchBar: React.FC<SearchBarProps> = ({
     <form 
       onSubmit={handleSubmit} 
       className={cn(
-        "relative flex w-full max-w-xl mx-auto items-center",
+        "relative flex w-full max-w-2xl mx-auto items-center group",
         className
       )}
     >
-      <div className="relative w-full group">
-        <Search 
-          size={18} 
-          className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground group-hover:text-primary transition-colors" 
-        />
+      <div className="relative w-full">
+        <div className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground/70 transition-all duration-300 group-focus-within:text-primary">
+          <Search size={18} />
+        </div>
         
         <Input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={placeholder}
-          className="w-full pl-12 pr-10 py-6 rounded-full border-border/50 bg-white/90 backdrop-blur-sm shadow-md focus-visible:ring-primary hover:border-primary/30 transition-all"
+          className="w-full pl-12 pr-10 py-6 h-14 rounded-full border-border/40 bg-background/80 backdrop-blur-sm shadow-sm focus-visible:ring-primary/20 focus-visible:ring-4 focus-visible:border-primary transition-all"
         />
         
         {query && (
@@ -57,7 +56,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
             type="button"
             variant="ghost"
             size="sm"
-            className="absolute right-3 top-1/2 -translate-y-1/2 h-8 w-8 p-0 text-muted-foreground hover:text-destructive rounded-full"
+            className="absolute right-16 top-1/2 -translate-y-1/2 h-8 w-8 p-0 text-muted-foreground hover:text-destructive rounded-full"
             onClick={clearSearch}
           >
             <X size={16} />
@@ -68,7 +67,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
       
       <Button 
         type="submit"
-        className="ml-3 rounded-full px-7 py-6 bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg"
+        className="ml-3 rounded-full px-7 py-6 h-14 bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg"
       >
         Search
       </Button>

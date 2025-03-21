@@ -7,10 +7,12 @@ import { CategoryChip } from '@/components/CategoryChip';
 import { SearchBar } from '@/components/SearchBar';
 import { Button } from '@/components/ui/button';
 import { recipes, categories } from '@/data/recipes';
-import { ChefHat, Flame, Clock, Award } from 'lucide-react';
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command';
+import { ChefHat, Flame, Clock, Award, Search, UtensilsCrossed, ChevronRight } from 'lucide-react';
 
 const Index = () => {
   const [featuredCategory, setFeaturedCategory] = useState<string | null>(null);
+  const [isCommandOpen, setIsCommandOpen] = useState(false);
   
   const filteredRecipes = featuredCategory
     ? recipes.filter(recipe => 
@@ -26,20 +28,96 @@ const Index = () => {
   return (
     <Layout>
       <section className="space-y-12 py-8">
-        {/* Search bar section with rounded background */}
-        <div className="relative bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-sm border border-border/50 mb-12">
-          <div className="max-w-xl mx-auto">
-            <h2 className="text-xl font-medium text-center mb-6">Find Your Next Culinary Adventure</h2>
-            <SearchBar 
-              onSearch={(query) => {
-                if (query) {
-                  window.location.href = `/search?q=${encodeURIComponent(query)}`;
-                }
-              }}
-              placeholder="Search for recipes, ingredients, or categories..."
-            />
+        {/* Search section with enhanced design */}
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/20 via-accent/30 to-background p-8 md:p-12 shadow-lg border border-border/50 mb-12">
+          <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,#ffffff10,#ffffff90)] -z-10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background/0 to-accent/20 -z-10" />
+          
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-6">
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                <UtensilsCrossed size={14} className="mr-1" />
+                <span>Delicious Inspiration</span>
+              </div>
+              
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+                Find Your Next <span className="bg-gradient-to-r from-primary to-purple-500 text-transparent bg-clip-text">Culinary Adventure</span>
+              </h2>
+              
+              <p className="text-muted-foreground max-w-md">
+                Discover recipes from around the world. Whether you're looking for quick meals, healthy options, or gourmet challenges.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button
+                  className="group"
+                  onClick={() => setIsCommandOpen(true)}
+                  size="lg"
+                >
+                  <Search size={18} className="mr-2" />
+                  Search Recipes
+                </Button>
+                
+                <Button variant="outline" asChild size="lg">
+                  <Link to="/categories" className="group">
+                    <span>Browse Categories</span>
+                    <ChevronRight size={16} className="ml-2 group-hover:translate-x-0.5 transition-transform" />
+                  </Link>
+                </Button>
+              </div>
+              
+              <div className="grid grid-cols-3 gap-2 pt-2">
+                {[
+                  { icon: <Clock size={16} />, text: "Quick Meals" },
+                  { icon: <ChefHat size={16} />, text: "All Skill Levels" },
+                  { icon: <Award size={16} />, text: "Top Rated" }
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                    {item.icon}
+                    <span>{item.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="hidden md:block relative">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/20 rounded-full blur-3xl -z-10" />
+              <img 
+                src="/placeholder.svg" 
+                alt="Food collage" 
+                className="rounded-2xl shadow-lg border border-border/50"
+              />
+              <div className="absolute -bottom-4 -right-4 bg-background p-3 rounded-xl shadow-lg border border-border/50">
+                <div className="flex items-center gap-2">
+                  <Flame size={20} className="text-primary" />
+                  <span className="font-medium">1000+ Recipes</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        
+        {/* Command menu for search */}
+        <Command open={isCommandOpen} onOpenChange={setIsCommandOpen} className="rounded-lg border shadow-md">
+          <CommandInput placeholder="Search for recipes, ingredients..." />
+          <CommandList>
+            <CommandEmpty>No results found.</CommandEmpty>
+            <CommandGroup heading="Quick Suggestions">
+              {["Pasta", "Chicken", "Vegetarian", "Dessert", "30-minute meals"].map(item => (
+                <CommandItem 
+                  key={item}
+                  onSelect={() => {
+                    setIsCommandOpen(false);
+                    window.location.href = `/search?q=${encodeURIComponent(item)}`;
+                  }}
+                >
+                  <Search className="mr-2 h-4 w-4" />
+                  <span>{item}</span>
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          </CommandList>
+        </Command>
         
         {/* Featured Recipes Section */}
         <div className="space-y-6">
