@@ -106,15 +106,15 @@ export interface Recipe {
 
 The project is built using modern web technologies. Below is an overview:
 
-| Technology        | Description                                      | Version  | Completed? |
-| ----------------- | ------------------------------------------------ | -------- | ---------- |
-| **React**         | Frontend library for building UI components      | 18.x     | ✅         |
-| **TypeScript**    | Superset of JavaScript with static type-checking   | 4.x      |-          |
-| **Node.js**       | JavaScript runtime environment for development     | 14.x+    |-          |
-| **Express.js**    | Web framework for Node.js                          | 4.x      |-          |
-| **MongoDB**       | NoSQL database (optional for dynamic recipes)      | 4.x+     |NO         |
-| **SCSS/CSS3**     | Styling the web application                        | N/A      |NO         |
-| **Webpack**       | Module bundler for modern JavaScript applications  | 5.x      |NO         |
+| Technology        | Description                                      | Version  |
+| ----------------- | ------------------------------------------------ | -------- |
+| **React**         | Frontend library for building UI components      | 18.x     |
+| **TypeScript**    | Superset of JavaScript with static type-checking   | 4.x      |
+| **Node.js**       | JavaScript runtime environment for development     | 14.x+    |
+| **Express.js**    | Web framework for Node.js                          | 4.x      |
+| **MongoDB**       | NoSQL database (optional for dynamic recipes)      | 4.x+     |
+| **SCSS/CSS3**     | Styling the web application                        | N/A      |
+| **Webpack**       | Module bundler for modern JavaScript applications  | 5.x      |
 
 ---
 
@@ -152,14 +152,14 @@ Mama's Recipes features a variety of recipe categories to suit every taste:
 
 We plan to continually improve Mama's Recipes with the following enhancements:
 
-| Milestone                   | Description                                                      | Target Date   |
-| --------------------------- | ---------------------------------------------------------------- | ------------- |
-| **Responsive Redesign**     | Enhance mobile responsiveness and accessibility                  | Q3 2025       |
-| **User Profiles**           | Allow users to create profiles and save custom recipe collections  | Q4 2025       |
-| **Social Sharing**          | Integrate social media sharing for recipes                         | Q1 2026       |
-| **API Integration**         | Develop a RESTful API for external recipe sharing                    | Q2 2026       |
-| **Enhanced Search Filters** | Introduce advanced search filters like cook time and ingredients      | Q3 2026       |
-| **Community Forum**         | Launch a community forum for recipe discussions and tips             | Q4 2026       |
+| Milestone                   | Description                                                      | Target Date   | Completed? |
+| --------------------------- | ---------------------------------------------------------------- | ------------- | ---------- |
+| **Responsive Redesign**     | Enhance mobile responsiveness and accessibility                  | Q3 2025       |✅          |
+| **User Profiles**           | Allow users to create profiles and save custom recipe collections  | Q4 2025     |NO          |
+| **Social Sharing**          | Integrate social media sharing for recipes                         | Q1 2026     |NO          |
+| **API Integration**         | Develop a RESTful API for external recipe sharing                    | Q2 2026   |NO          |
+| **Enhanced Search Filters** | Introduce advanced search filters like cook time and ingredients      | Q3 2026  |In Progress |
+| **Community Forum**         | Launch a community forum for recipe discussions and tips             | Q4 2026   |NO          |
 
 ---
 
