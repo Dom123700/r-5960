@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
@@ -27,10 +26,19 @@ export const SearchBar: React.FC<SearchBarProps> = ({
 
   useEffect(() => {
     if (query.trim() && showSuggestions) {
-      // Add a small delay to avoid excessive searches while typing
       const timer = setTimeout(() => {
-        const results = searchRecipes(query);
-        setSuggestions(results.slice(0, 5)); // Limit to 5 for better UX
+        const nameMatches = recipes.filter(recipe => 
+          recipe.name.toLowerCase().includes(query.toLowerCase())
+        );
+        
+        const contentMatches = recipes.filter(recipe => 
+          !recipe.name.toLowerCase().includes(query.toLowerCase()) && 
+          recipe.description.toLowerCase().includes(query.toLowerCase())
+        );
+        
+        const combinedResults = [...nameMatches, ...contentMatches];
+        
+        setSuggestions(combinedResults.slice(0, 5));
       }, 200);
       
       return () => clearTimeout(timer);
@@ -73,7 +81,6 @@ export const SearchBar: React.FC<SearchBarProps> = ({
             className="w-full pl-12 pr-10 py-6 h-14 rounded-full border-border/40 bg-background/80 backdrop-blur-sm shadow-sm focus-visible:ring-primary/20 focus-visible:ring-4 focus-visible:border-primary transition-all"
             onFocus={() => setIsFocused(true)}
             onBlur={() => {
-              // Delay hiding suggestions to allow for clicking on them
               setTimeout(() => setIsFocused(false), 200);
             }}
           />
@@ -100,7 +107,6 @@ export const SearchBar: React.FC<SearchBarProps> = ({
         </Button>
       </form>
       
-      {/* Live search suggestions dropdown */}
       {showSuggestions && isFocused && suggestions.length > 0 && (
         <div className="absolute top-full left-0 right-0 z-50 mt-1 bg-background rounded-xl shadow-lg border border-border/50 overflow-hidden">
           <ul className="py-1">
