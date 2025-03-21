@@ -585,7 +585,852 @@ export const recipes: Recipe[] = [
       "Bake at 180°C (350°F) for 30-35 minutes until golden.",
       "Cool and dust with powdered sugar before slicing."
     ]
-  }
+  }// --- Additional 30 Original Recipes ---
+{
+  id: "19",
+  name: "Spicy Chickpea Tacos",
+  description: "Vibrant and flavorful tacos featuring crispy chickpeas, tangy slaw, and a kick of spice.",
+  image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80",
+  cookTime: 20,
+  prepTime: 15,
+  servings: 4,
+  difficulty: "Easy",
+  categories: ["Lunch", "Dinner", "Vegan", "Quick"],
+  ingredients: [
+    "1 can chickpeas, drained and rinsed",
+    "2 tbsp olive oil",
+    "1 tsp cumin",
+    "1 tsp smoked paprika",
+    "Salt and pepper to taste",
+    "8 small taco shells",
+    "2 cups shredded lettuce",
+    "1 cup salsa",
+    "Lime wedges for serving"
+  ],
+  instructions: [
+    "Preheat the oven to 200°C.",
+    "Toss chickpeas with olive oil, cumin, smoked paprika, salt, and pepper.",
+    "Spread on a baking tray and roast for 15 minutes until crispy.",
+    "Fill taco shells with chickpeas, lettuce, and salsa.",
+    "Squeeze fresh lime juice over the top and serve immediately."
+  ]
+},
+{
+  id: "20",
+  name: "Mediterranean Quinoa Salad",
+  description: "A refreshing salad loaded with quinoa, cherry tomatoes, cucumbers, olives, and feta, dressed in lemon and olive oil.",
+  image: "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&q=80",
+  cookTime: 15,
+  prepTime: 10,
+  servings: 4,
+  difficulty: "Easy",
+  categories: ["Lunch", "Salad", "Healthy"],
+  ingredients: [
+    "1 cup quinoa",
+    "2 cups water",
+    "1 cup cherry tomatoes, halved",
+    "1 cucumber, diced",
+    "1/2 cup kalamata olives, pitted and sliced",
+    "100g feta cheese, crumbled",
+    "Juice of 1 lemon",
+    "2 tbsp olive oil",
+    "Salt and pepper to taste"
+  ],
+  instructions: [
+    "Rinse the quinoa and cook with water until fluffy; let cool.",
+    "In a large bowl, combine quinoa, tomatoes, cucumber, olives, and feta.",
+    "Drizzle with lemon juice and olive oil, season with salt and pepper, and toss gently.",
+    "Serve chilled or at room temperature."
+  ]
+},
+{
+  id: "21",
+  name: "Herb-Crusted Salmon with Lemon Butter",
+  description: "A succulent salmon fillet with a crispy herb crust and a rich lemon butter sauce.",
+  image: "https://images.unsplash.com/photo-1589923188900-1c2f1405c716?auto=format&fit=crop&w=800&q=80",
+  cookTime: 20,
+  prepTime: 10,
+  servings: 2,
+  difficulty: "Medium",
+  categories: ["Dinner", "Seafood", "Healthy"],
+  ingredients: [
+    "2 salmon fillets",
+    "1 cup breadcrumbs",
+    "2 tbsp mixed chopped herbs (parsley, dill, thyme)",
+    "Zest of 1 lemon",
+    "3 tbsp butter",
+    "Salt and pepper to taste",
+    "1 tbsp olive oil"
+  ],
+  instructions: [
+    "Preheat your oven to 200°C.",
+    "Season salmon with salt and pepper, then press onto a mix of breadcrumbs, herbs, and lemon zest.",
+    "Heat olive oil in a pan and sear the salmon briefly on each side.",
+    "Transfer to the oven for 8-10 minutes until cooked.",
+    "Melt butter with extra lemon juice and drizzle over the salmon before serving."
+  ]
+},
+{
+  id: "22",
+  name: "Vegetable Stir-Fry with Cashew Sauce",
+  description: "A colorful medley of stir-fried vegetables tossed in a creamy, nutty cashew sauce.",
+  image: "https://images.unsplash.com/photo-1572448862520-df05d6d9a94d?auto=format&fit=crop&w=800&q=80",
+  cookTime: 15,
+  prepTime: 15,
+  servings: 4,
+  difficulty: "Easy",
+  categories: ["Dinner", "Vegan", "Asian", "Quick"],
+  ingredients: [
+    "1 red bell pepper, sliced",
+    "1 yellow bell pepper, sliced",
+    "1 broccoli head, cut into florets",
+    "1 cup snap peas",
+    "1 carrot, julienned",
+    "1/2 cup cashews",
+    "2 garlic cloves, minced",
+    "2 tbsp soy sauce",
+    "1 tbsp rice vinegar",
+    "1 tbsp sesame oil",
+    "1 tsp grated ginger"
+  ],
+  instructions: [
+    "In a blender, combine cashews, soy sauce, rice vinegar, ginger, and a splash of water to form a smooth sauce.",
+    "Heat sesame oil in a wok and stir-fry garlic for 30 seconds.",
+    "Add all vegetables and stir-fry for about 5-7 minutes until crisp-tender.",
+    "Pour in the cashew sauce and toss to coat evenly.",
+    "Serve hot over steamed rice or noodles."
+  ]
+},
+{
+  id: "23",
+  name: "Rustic Ratatouille",
+  description: "A hearty vegetable stew featuring eggplant, zucchini, bell peppers, and tomatoes simmered with Provençal herbs.",
+  image: "https://images.unsplash.com/photo-1598515213697-2993a345f7d8?auto=format&fit=crop&w=800&q=80",
+  cookTime: 40,
+  prepTime: 15,
+  servings: 4,
+  difficulty: "Medium",
+  categories: ["Dinner", "Vegan", "French", "Healthy"],
+  ingredients: [
+    "1 eggplant, diced",
+    "2 zucchinis, sliced",
+    "2 bell peppers, chopped",
+    "4 tomatoes, diced",
+    "1 onion, sliced",
+    "3 garlic cloves, minced",
+    "2 tbsp olive oil",
+    "1 tsp dried thyme",
+    "1 tsp dried rosemary",
+    "Salt and pepper to taste"
+  ],
+  instructions: [
+    "Heat olive oil in a large pot and sauté onion and garlic until translucent.",
+    "Add eggplant, zucchinis, and bell peppers; cook for 5 minutes.",
+    "Stir in tomatoes and herbs, season with salt and pepper.",
+    "Simmer uncovered for 25 minutes until vegetables are tender.",
+    "Serve warm with crusty bread."
+  ]
+},
+{
+  id: "24",
+  name: "Baked Eggplant Parmesan",
+  description: "A lighter twist on a classic Italian dish featuring breaded, baked eggplant layered with marinara sauce and melted cheese.",
+  image: "https://images.unsplash.com/photo-1601924582970-0a918d2d0a2c?auto=format&fit=crop&w=800&q=80",
+  cookTime: 35,
+  prepTime: 20,
+  servings: 4,
+  difficulty: "Medium",
+  categories: ["Dinner", "Italian", "Vegetarian"],
+  ingredients: [
+    "2 medium eggplants, sliced into 1/2cm rounds",
+    "1 cup breadcrumbs",
+    "2 eggs, beaten",
+    "2 cups marinara sauce",
+    "200g mozzarella cheese, sliced",
+    "50g Parmesan cheese, grated",
+    "Salt and pepper to taste",
+    "Olive oil spray"
+  ],
+  instructions: [
+    "Preheat the oven to 200°C.",
+    "Dip eggplant slices in egg then coat in breadcrumbs; place on a baking sheet and spray lightly with olive oil.",
+    "Bake for 20 minutes until golden.",
+    "Layer baked eggplant in a dish with marinara sauce and cheeses.",
+    "Bake for an additional 10 minutes until cheese melts; serve hot."
+  ]
+},
+{
+  id: "25",
+  name: "Coconut Lime Chicken",
+  description: "Tender chicken simmered in a creamy coconut and zesty lime sauce, perfect for a tropical dinner.",
+  image: "https://images.unsplash.com/photo-1576402187878-df9c0d21db70?auto=format&fit=crop&w=800&q=80",
+  cookTime: 30,
+  prepTime: 15,
+  servings: 4,
+  difficulty: "Medium",
+  categories: ["Dinner", "Asian", "Healthy"],
+  ingredients: [
+    "500g chicken thighs, boneless and skinless",
+    "400ml coconut milk",
+    "Juice and zest of 2 limes",
+    "2 garlic cloves, minced",
+    "1 tbsp grated ginger",
+    "1 red chili, sliced",
+    "Salt to taste",
+    "1 tbsp olive oil",
+    "Fresh cilantro for garnish"
+  ],
+  instructions: [
+    "Heat olive oil in a pan and brown the chicken on all sides.",
+    "Add garlic, ginger, and red chili; sauté briefly.",
+    "Pour in coconut milk and lime juice/zest; simmer for 20 minutes until chicken is tender.",
+    "Season with salt and garnish with fresh cilantro before serving."
+  ]
+},
+{
+  id: "26",
+  name: "Mushroom Risotto",
+  description: "A creamy risotto loaded with a medley of mushrooms and finished with a hint of truffle oil for extra luxury.",
+  image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80",
+  cookTime: 30,
+  prepTime: 10,
+  servings: 4,
+  difficulty: "Hard",
+  categories: ["Dinner", "Italian", "Vegetarian"],
+  ingredients: [
+    "1½ cups Arborio rice",
+    "200g mixed mushrooms, sliced",
+    "1 onion, finely chopped",
+    "2 garlic cloves, minced",
+    "4 cups vegetable broth, kept warm",
+    "½ cup white wine",
+    "2 tbsp butter",
+    "50g Parmesan cheese, grated",
+    "1 tsp truffle oil",
+    "Salt and pepper to taste"
+  ],
+  instructions: [
+    "Sauté onion and garlic in butter until soft.",
+    "Add rice and toast for 2 minutes until slightly translucent.",
+    "Deglaze with white wine, then gradually add warm broth while stirring continuously.",
+    "Stir in mushrooms and cook until the rice is creamy and tender.",
+    "Mix in Parmesan, drizzle with truffle oil, season with salt and pepper, and serve immediately."
+  ]
+},
+{
+  id: "27",
+  name: "Grilled Portobello Burger",
+  description: "A hearty vegetarian burger featuring marinated, grilled Portobello mushrooms served on a toasted bun with fresh toppings.",
+  image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80",
+  cookTime: 15,
+  prepTime: 15,
+  servings: 2,
+  difficulty: "Easy",
+  categories: ["Lunch", "Vegetarian", "Quick"],
+  ingredients: [
+    "2 large Portobello mushroom caps",
+    "2 burger buns",
+    "1 tbsp balsamic vinegar",
+    "1 tbsp olive oil",
+    "1 garlic clove, minced",
+    "Salt and pepper to taste",
+    "Lettuce leaves",
+    "Tomato slices",
+    "Red onion slices",
+    "Optional cheese slices"
+  ],
+  instructions: [
+    "Mix balsamic vinegar, olive oil, garlic, salt, and pepper; marinate mushrooms for 15 minutes.",
+    "Grill mushrooms for 7 minutes per side until tender and juicy.",
+    "Assemble burgers with toasted buns, lettuce, tomato, red onion, and grilled mushrooms (add cheese if desired)."
+  ]
+},
+{
+  id: "28",
+  name: "Zesty Black Bean Soup",
+  description: "A vibrant and hearty black bean soup with a tangy twist of lime and cumin—ideal for a quick, healthy meal.",
+  image: "https://images.unsplash.com/photo-1598515211872-f86f4c2b5a9c?auto=format&fit=crop&w=800&q=80",
+  cookTime: 25,
+  prepTime: 10,
+  servings: 4,
+  difficulty: "Easy",
+  categories: ["Soup", "Vegan", "Healthy"],
+  ingredients: [
+    "2 cans black beans, drained",
+    "1 onion, chopped",
+    "2 garlic cloves, minced",
+    "1 tsp ground cumin",
+    "Juice of 1 lime",
+    "2 cups vegetable broth",
+    "1 red bell pepper, diced",
+    "Salt and pepper to taste",
+    "1 tbsp olive oil",
+    "Fresh cilantro for garnish"
+  ],
+  instructions: [
+    "Heat olive oil in a pot and sauté onion and garlic until soft.",
+    "Add red bell pepper and cumin; cook for 2 minutes.",
+    "Stir in black beans and vegetable broth, simmer for 15 minutes.",
+    "Add lime juice, adjust seasoning, and garnish with cilantro before serving."
+  ]
+},
+{
+  id: "29",
+  name: "Sweet Potato and Kale Frittata",
+  description: "A nourishing frittata bursting with roasted sweet potatoes, kale, and aromatic herbs—a perfect start to your day.",
+  image: "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&q=80",
+  cookTime: 25,
+  prepTime: 15,
+  servings: 4,
+  difficulty: "Easy",
+  categories: ["Breakfast", "Vegetarian", "Healthy"],
+  ingredients: [
+    "1 large sweet potato, peeled and diced",
+    "2 cups kale, chopped",
+    "6 eggs",
+    "½ cup milk",
+    "1 small onion, diced",
+    "1 garlic clove, minced",
+    "Salt and pepper to taste",
+    "2 tbsp olive oil",
+    "Optional: crumbled feta cheese"
+  ],
+  instructions: [
+    "Roast sweet potato in olive oil at 200°C for 20 minutes until tender.",
+    "Sauté onion, garlic, and kale until wilted.",
+    "Whisk eggs with milk, salt, and pepper; stir in roasted sweet potatoes and sautéed greens.",
+    "Pour the mixture into an oven-safe pan and bake at 180°C for 10 minutes until set.",
+    "Sprinkle feta on top if desired and serve warm."
+  ]
+},
+{
+  id: "30",
+  name: "Berry Almond Overnight Oats",
+  description: "A nutritious, make-ahead breakfast of overnight oats topped with fresh berries and toasted almonds.",
+  image: "https://images.unsplash.com/photo-1551024709-8f23befc6e94?auto=format&fit=crop&w=800&q=80",
+  cookTime: 0,
+  prepTime: 5,
+  servings: 1,
+  difficulty: "Easy",
+  categories: ["Breakfast", "Healthy", "Vegan"],
+  ingredients: [
+    "½ cup rolled oats",
+    "1 cup almond milk",
+    "1 tbsp chia seeds",
+    "½ cup mixed berries",
+    "1 tbsp almond butter",
+    "Maple syrup to taste"
+  ],
+  instructions: [
+    "Combine oats, almond milk, and chia seeds in a jar.",
+    "Stir in almond butter and maple syrup.",
+    "Top with fresh berries, cover, and refrigerate overnight.",
+    "Enjoy cold the next morning."
+  ]
+},
+{
+  id: "31",
+  name: "Savory Spinach and Feta Stuffed Chicken",
+  description: "Juicy chicken breasts filled with a flavorful blend of spinach, feta, and herbs, then baked to perfection.",
+  image: "https://images.unsplash.com/photo-1585238342029-cd8b20c88e89?auto=format&fit=crop&w=800&q=80",
+  cookTime: 30,
+  prepTime: 20,
+  servings: 4,
+  difficulty: "Medium",
+  categories: ["Dinner", "Healthy"],
+  ingredients: [
+    "4 chicken breasts",
+    "2 cups fresh spinach",
+    "100g feta cheese, crumbled",
+    "1 garlic clove, minced",
+    "1 tbsp olive oil",
+    "Salt and pepper to taste",
+    "1 tsp dried oregano"
+  ],
+  instructions: [
+    "Preheat oven to 180°C.",
+    "Sauté spinach with garlic in olive oil until wilted; mix in feta and oregano.",
+    "Slice a pocket into each chicken breast and stuff with the mixture.",
+    "Season the outside with salt and pepper.",
+    "Bake for 25–30 minutes until the chicken is fully cooked."
+  ]
+},
+{
+  id: "32",
+  name: "Roasted Cauliflower Tacos",
+  description: "Crispy roasted cauliflower with smoky spices served in warm tortillas with a tangy lime slaw.",
+  image: "https://images.unsplash.com/photo-1598515213289-ace9f2e31f86?auto=format&fit=crop&w=800&q=80",
+  cookTime: 25,
+  prepTime: 15,
+  servings: 4,
+  difficulty: "Easy",
+  categories: ["Lunch", "Dinner", "Vegan"],
+  ingredients: [
+    "1 head cauliflower, cut into florets",
+    "2 tbsp olive oil",
+    "1 tsp smoked paprika",
+    "½ tsp cumin",
+    "Salt and pepper to taste",
+    "8 small tortillas",
+    "2 cups shredded cabbage",
+    "Juice of 1 lime",
+    "¼ cup vegan mayo",
+    "1 tsp hot sauce"
+  ],
+  instructions: [
+    "Toss cauliflower with olive oil, smoked paprika, cumin, salt, and pepper.",
+    "Roast in a preheated oven at 200°C for 20 minutes until golden.",
+    "Mix cabbage with lime juice, vegan mayo, and hot sauce to form a slaw.",
+    "Fill tortillas with roasted cauliflower and top with slaw before serving."
+  ]
+},
+{
+  id: "33",
+  name: "Thai Peanut Noodle Salad",
+  description: "A refreshing noodle salad with a creamy Thai peanut dressing, crisp vegetables, and a hint of lime.",
+  image: "https://images.unsplash.com/photo-1572441710264-9d64f74aa3fa?auto=format&fit=crop&w=800&q=80",
+  cookTime: 15,
+  prepTime: 15,
+  servings: 4,
+  difficulty: "Easy",
+  categories: ["Lunch", "Dinner", "Asian", "Vegetarian"],
+  ingredients: [
+    "200g rice noodles",
+    "1 red bell pepper, thinly sliced",
+    "1 cucumber, julienned",
+    "2 carrots, shredded",
+    "½ cup chopped peanuts",
+    "¼ cup fresh cilantro, chopped",
+    "¼ cup peanut butter",
+    "Juice of 1 lime",
+    "2 tbsp soy sauce",
+    "1 tbsp honey",
+    "1 tsp grated ginger",
+    "1 tbsp sesame oil"
+  ],
+  instructions: [
+    "Cook rice noodles as per package directions and rinse under cold water.",
+    "Whisk together peanut butter, lime juice, soy sauce, honey, ginger, and sesame oil to form the dressing.",
+    "Toss noodles with sliced vegetables and dressing.",
+    "Garnish with cilantro and chopped peanuts before serving."
+  ]
+},
+{
+  id: "34",
+  name: "Maple Dijon Glazed Pork Chops",
+  description: "Juicy pork chops enhanced by a sweet and tangy glaze of maple syrup and Dijon mustard.",
+  image: "https://images.unsplash.com/photo-1562967916-eb82221dfb47?auto=format&fit=crop&w=800&q=80",
+  cookTime: 20,
+  prepTime: 15,
+  servings: 4,
+  difficulty: "Medium",
+  categories: ["Dinner", "American"],
+  ingredients: [
+    "4 pork chops",
+    "3 tbsp maple syrup",
+    "2 tbsp Dijon mustard",
+    "1 garlic clove, minced",
+    "1 tbsp olive oil",
+    "Salt and pepper to taste",
+    "Fresh thyme for garnish"
+  ],
+  instructions: [
+    "Season pork chops with salt and pepper.",
+    "Sear in olive oil over high heat until browned on both sides.",
+    "Mix maple syrup, Dijon mustard, and garlic; brush over the chops.",
+    "Transfer to a preheated oven at 180°C and bake for 10 minutes.",
+    "Garnish with fresh thyme before serving."
+  ]
+},
+{
+  id: "35",
+  name: "Saffron Seafood Paella",
+  description: "A festive and aromatic seafood paella bursting with saffron-infused rice and an assortment of fresh seafood.",
+  image: "https://images.unsplash.com/photo-1601924582970-0a918d2d0a2c?auto=format&fit=crop&w=800&q=80",
+  cookTime: 45,
+  prepTime: 20,
+  servings: 6,
+  difficulty: "Hard",
+  categories: ["Dinner", "Seafood", "Spanish"],
+  ingredients: [
+    "2 cups short-grain rice",
+    "500g mixed seafood (shrimp, mussels, clams)",
+    "1 red bell pepper, sliced",
+    "1 onion, chopped",
+    "2 garlic cloves, minced",
+    "A pinch of saffron threads",
+    "4 cups seafood broth",
+    "2 tomatoes, diced",
+    "2 tbsp olive oil",
+    "Salt and pepper to taste",
+    "Fresh parsley for garnish"
+  ],
+  instructions: [
+    "In a large pan, sauté onion, garlic, and bell pepper in olive oil.",
+    "Add rice and saffron; stir for 2 minutes.",
+    "Pour in seafood broth and diced tomatoes; bring to a simmer.",
+    "Arrange seafood on top and cook until rice is tender and seafood is done.",
+    "Season with salt and pepper, garnish with parsley, and serve."
+  ]
+},
+{
+  id: "36",
+  name: "Vegetarian Lentil Shepherd’s Pie",
+  description: "A hearty, comforting shepherd’s pie made with lentils, mixed vegetables, and a creamy mashed potato topping.",
+  image: "https://images.unsplash.com/photo-1572448862718-5169ec6c6a02?auto=format&fit=crop&w=800&q=80",
+  cookTime: 40,
+  prepTime: 20,
+  servings: 6,
+  difficulty: "Medium",
+  categories: ["Dinner", "Vegetarian", "Comfort Food"],
+  ingredients: [
+    "1 cup green or brown lentils",
+    "2 cups vegetable broth",
+    "1 onion, diced",
+    "2 carrots, diced",
+    "1 cup frozen peas",
+    "3 garlic cloves, minced",
+    "2 tbsp tomato paste",
+    "4 cups mashed potatoes",
+    "2 tbsp olive oil",
+    "Salt and pepper to taste",
+    "1 tsp dried thyme"
+  ],
+  instructions: [
+    "Sauté onion, garlic, and carrots in olive oil until soft.",
+    "Add lentils, tomato paste, and broth; simmer until lentils are tender.",
+    "Stir in peas and thyme, then transfer the mixture to a baking dish.",
+    "Top with mashed potatoes and bake at 180°C for 15 minutes until the top is golden.",
+    "Serve hot."
+  ]
+},
+{
+  id: "37",
+  name: "Crispy Baked Zucchini Fries",
+  description: "Lightly breaded zucchini sticks baked to a crispy perfection—an ideal healthy snack or side dish.",
+  image: "https://images.unsplash.com/photo-1598515211443-6e0dd27b7323?auto=format&fit=crop&w=800&q=80",
+  cookTime: 25,
+  prepTime: 15,
+  servings: 4,
+  difficulty: "Easy",
+  categories: ["Snack", "Vegetarian", "Healthy"],
+  ingredients: [
+    "2 large zucchinis, cut into sticks",
+    "1 cup breadcrumbs",
+    "½ cup grated Parmesan cheese",
+    "2 eggs, beaten",
+    "Salt and pepper to taste",
+    "1 tsp garlic powder",
+    "Olive oil spray"
+  ],
+  instructions: [
+    "Preheat the oven to 220°C.",
+    "Dip zucchini sticks in egg, then coat in a mix of breadcrumbs, Parmesan, garlic powder, salt, and pepper.",
+    "Arrange on a baking tray, spray lightly with olive oil, and bake for 25 minutes until crispy and golden."
+  ]
+},
+{
+  id: "38",
+  name: "Homemade Vanilla Bean Ice Cream",
+  description: "A rich and creamy ice cream made with real vanilla beans and a touch of homemade custard.",
+  image: "https://images.unsplash.com/photo-1589307004397-8a10dffcf5a3?auto=format&fit=crop&w=800&q=80",
+  cookTime: 0,
+  prepTime: 240, // including custard cooking and freezing time
+  servings: 6,
+  difficulty: "Hard",
+  categories: ["Dessert", "Frozen"],
+  ingredients: [
+    "500ml heavy cream",
+    "250ml whole milk",
+    "150g sugar",
+    "1 vanilla bean, split and scraped",
+    "4 egg yolks",
+    "A pinch of salt"
+  ],
+  instructions: [
+    "Heat milk, cream, and vanilla bean in a saucepan over medium heat.",
+    "In a separate bowl, whisk egg yolks with sugar until pale.",
+    "Slowly combine a bit of the hot milk mixture into the yolks, then return to the saucepan.",
+    "Cook over low heat until the custard thickens slightly (do not boil).",
+    "Strain the custard, cool completely, churn in an ice cream maker, and freeze until firm."
+  ]
+},
+{
+  id: "39",
+  name: "Grilled Shrimp and Avocado Salad",
+  description: "A light and refreshing salad featuring grilled shrimp, creamy avocado, and crisp greens dressed in citrus.",
+  image: "https://images.unsplash.com/photo-1585238342157-1bcae9c36f1e?auto=format&fit=crop&w=800&q=80",
+  cookTime: 10,
+  prepTime: 15,
+  servings: 2,
+  difficulty: "Easy",
+  categories: ["Salad", "Seafood", "Healthy"],
+  ingredients: [
+    "200g shrimp, peeled and deveined",
+    "1 avocado, sliced",
+    "Mixed salad greens",
+    "1 orange, segmented",
+    "Juice of 1 lime",
+    "2 tbsp olive oil",
+    "Salt and pepper to taste",
+    "Fresh cilantro for garnish"
+  ],
+  instructions: [
+    "Season shrimp with salt and pepper and grill over medium heat until pink and cooked through (about 3 minutes per side).",
+    "In a bowl, combine salad greens, avocado, and orange segments.",
+    "Drizzle with lime juice and olive oil, toss gently, and top with grilled shrimp.",
+    "Garnish with fresh cilantro and serve immediately."
+  ]
+},
+{
+  id: "40",
+  name: "Stuffed Bell Peppers with Rice and Beans",
+  description: "Colorful bell peppers stuffed with a hearty mixture of rice, beans, tomatoes, and spices, baked until tender.",
+  image: "https://images.unsplash.com/photo-1598515213224-3272c1b9d7fa?auto=format&fit=crop&w=800&q=80",
+  cookTime: 35,
+  prepTime: 20,
+  servings: 4,
+  difficulty: "Medium",
+  categories: ["Dinner", "Vegetarian", "Healthy"],
+  ingredients: [
+    "4 bell peppers, tops cut off and seeds removed",
+    "1 cup cooked rice",
+    "1 can black beans, drained",
+    "1 can diced tomatoes",
+    "1 onion, diced",
+    "2 garlic cloves, minced",
+    "1 tsp cumin",
+    "1 tsp chili powder",
+    "Salt and pepper to taste",
+    "1 cup shredded cheese (optional)",
+    "2 tbsp olive oil"
+  ],
+  instructions: [
+    "Preheat the oven to 190°C.",
+    "Sauté onion and garlic in olive oil until softened; add rice, black beans, tomatoes, cumin, and chili powder; season with salt and pepper.",
+    "Stuff each bell pepper with the rice mixture and top with cheese if using.",
+    "Place in a baking dish, cover with foil, and bake for 30 minutes until peppers are tender."
+  ]
+},
+{
+  id: "41",
+  name: "Spaghetti with Spinach Pesto",
+  description: "A twist on traditional pesto using fresh spinach and nuts to create a vibrant, herby sauce tossed with spaghetti.",
+  image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80",
+  cookTime: 15,
+  prepTime: 10,
+  servings: 4,
+  difficulty: "Easy",
+  categories: ["Dinner", "Italian", "Vegetarian"],
+  ingredients: [
+    "400g spaghetti",
+    "3 cups fresh spinach",
+    "½ cup walnuts or pine nuts",
+    "½ cup olive oil",
+    "1 garlic clove",
+    "50g Parmesan cheese, grated",
+    "Salt and pepper to taste",
+    "Juice of 1 lemon"
+  ],
+  instructions: [
+    "Cook spaghetti until al dente and drain, reserving some pasta water.",
+    "Blend spinach, nuts, garlic, lemon juice, and olive oil until smooth.",
+    "Toss the pesto with spaghetti, adding reserved pasta water to adjust consistency if needed.",
+    "Top with grated Parmesan, season with salt and pepper, and serve warm."
+  ]
+},
+{
+  id: "42",
+  name: "Butternut Squash Soup with Sage",
+  description: "A velvety, warming soup made from roasted butternut squash enhanced with aromatic sage and a touch of cream.",
+  image: "https://images.unsplash.com/photo-1572448862489-3c9c6d6ec2f3?auto=format&fit=crop&w=800&q=80",
+  cookTime: 40,
+  prepTime: 15,
+  servings: 4,
+  difficulty: "Easy",
+  categories: ["Soup", "Vegetarian", "Healthy"],
+  ingredients: [
+    "1 medium butternut squash, peeled and cubed",
+    "1 onion, chopped",
+    "2 garlic cloves, minced",
+    "4 cups vegetable broth",
+    "½ cup cream",
+    "1 tsp dried sage",
+    "Salt and pepper to taste",
+    "2 tbsp olive oil"
+  ],
+  instructions: [
+    "Roast the squash in olive oil at 200°C for 25 minutes until tender.",
+    "Sauté onion and garlic in a pot until soft.",
+    "Add roasted squash and vegetable broth; simmer for 10 minutes.",
+    "Blend until smooth, stir in cream and dried sage, season with salt and pepper, and reheat gently before serving."
+  ]
+},
+{
+  id: "43",
+  name: "Crispy Tofu Stir-Fry",
+  description: "A vibrant stir-fry featuring crispy tofu, mixed vegetables, and a savory sauce with a hint of spice.",
+  image: "https://images.unsplash.com/photo-1604908177529-9b9a97f384b1?auto=format&fit=crop&w=800&q=80",
+  cookTime: 20,
+  prepTime: 15,
+  servings: 4,
+  difficulty: "Easy",
+  categories: ["Dinner", "Vegan", "Asian"],
+  ingredients: [
+    "400g firm tofu, pressed and cubed",
+    "1 red bell pepper, sliced",
+    "1 cup broccoli florets",
+    "1 carrot, julienned",
+    "2 garlic cloves, minced",
+    "2 tbsp soy sauce",
+    "1 tbsp hoisin sauce",
+    "1 tsp sriracha",
+    "1 tbsp sesame oil",
+    "1 tbsp cornstarch"
+  ],
+  instructions: [
+    "Toss tofu in cornstarch and fry in sesame oil until crispy; remove and set aside.",
+    "Stir-fry bell pepper, broccoli, and carrot in the same pan with garlic.",
+    "Add soy sauce, hoisin sauce, and sriracha; stir to combine.",
+    "Return tofu to the pan, toss to coat with the sauce, and serve immediately."
+  ]
+},
+{
+  id: "44",
+  name: "Apple Cinnamon Bread Pudding",
+  description: "A comforting dessert made with chunks of apple, warm cinnamon, and a rich custard baked to golden perfection.",
+  image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80",
+  cookTime: 45,
+  prepTime: 15,
+  servings: 6,
+  difficulty: "Medium",
+  categories: ["Dessert", "Baking"],
+  ingredients: [
+    "6 cups cubed bread",
+    "2 apples, peeled and diced",
+    "4 eggs",
+    "2 cups milk",
+    "100g sugar",
+    "1 tsp cinnamon",
+    "1 tsp vanilla extract",
+    "¼ cup raisins (optional)",
+    "2 tbsp butter"
+  ],
+  instructions: [
+    "Preheat the oven to 180°C.",
+    "Whisk together eggs, milk, sugar, cinnamon, and vanilla extract.",
+    "Combine bread cubes, apples, and raisins in a baking dish; pour the custard mixture over evenly.",
+    "Dot with butter and bake for 45 minutes until custard is set and the top is golden.",
+    "Serve warm."
+  ]
+},
+{
+  id: "45",
+  name: "Moroccan Chickpea Stew",
+  description: "A hearty stew infused with Moroccan spices, tender chickpeas, and vegetables simmered in a rich tomato base.",
+  image: "https://images.unsplash.com/photo-1598515213652-945df1d4ebc5?auto=format&fit=crop&w=800&q=80",
+  cookTime: 35,
+  prepTime: 15,
+  servings: 4,
+  difficulty: "Medium",
+  categories: ["Dinner", "Vegan", "Moroccan"],
+  ingredients: [
+    "2 cans chickpeas, drained",
+    "1 onion, chopped",
+    "2 garlic cloves, minced",
+    "1 bell pepper, diced",
+    "1 can diced tomatoes",
+    "1 cup vegetable broth",
+    "1 tsp ground cumin",
+    "1 tsp ground coriander",
+    "½ tsp cinnamon",
+    "Salt and pepper to taste",
+    "2 tbsp olive oil",
+    "Fresh cilantro for garnish"
+  ],
+  instructions: [
+    "Heat olive oil in a pot and sauté onion and garlic until fragrant.",
+    "Add bell pepper, cumin, coriander, and cinnamon; cook for 2 minutes.",
+    "Stir in chickpeas, tomatoes, and broth, then simmer for 20 minutes.",
+    "Adjust seasoning, garnish with cilantro, and serve hot."
+  ]
+},
+{
+  id: "46",
+  name: "Lemon Herb Roasted Chicken",
+  description: "A classic roasted chicken infused with lemon, garlic, and fresh herbs for a deliciously aromatic meal.",
+  image: "https://images.unsplash.com/photo-1604908812220-d68747e3b441?auto=format&fit=crop&w=800&q=80",
+  cookTime: 60,
+  prepTime: 20,
+  servings: 4,
+  difficulty: "Medium",
+  categories: ["Dinner", "American", "Healthy"],
+  ingredients: [
+    "1 whole chicken (about 1.5kg)",
+    "Juice and zest of 2 lemons",
+    "4 garlic cloves, minced",
+    "2 tbsp olive oil",
+    "1 tbsp fresh rosemary, chopped",
+    "1 tbsp fresh thyme, chopped",
+    "Salt and pepper to taste"
+  ],
+  instructions: [
+    "Preheat oven to 200°C.",
+    "Rub the chicken thoroughly with lemon juice, zest, garlic, herbs, salt, and pepper.",
+    "Roast in the oven for 60 minutes, basting occasionally.",
+    "Let rest for 10 minutes before carving and serving."
+  ]
+},
+{
+  id: "47",
+  name: "Berry Coconut Smoothie",
+  description: "A refreshing smoothie blending mixed berries with creamy coconut milk and a touch of honey for natural sweetness.",
+  image: "https://images.unsplash.com/photo-1572441710199-8f76fce33d59?auto=format&fit=crop&w=800&q=80",
+  cookTime: 5,
+  prepTime: 5,
+  servings: 1,
+  difficulty: "Easy",
+  categories: ["Drink", "Breakfast", "Healthy"],
+  ingredients: [
+    "1 cup mixed berries",
+    "½ cup coconut milk",
+    "½ cup ice",
+    "1 tsp honey",
+    "¼ cup water (adjust for desired consistency)"
+  ],
+  instructions: [
+    "Combine all ingredients in a blender.",
+    "Blend until smooth, adjusting thickness with water if needed.",
+    "Serve immediately in a chilled glass."
+  ]
+},
+{
+  id: "48",
+  name: "Caramelized Banana Crepes",
+  description: "Thin, delicate crepes filled with caramelized bananas and drizzled with maple syrup for a decadent breakfast or dessert.",
+  image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80",
+  cookTime: 15,
+  prepTime: 20,
+  servings: 4,
+  difficulty: "Medium",
+  categories: ["Breakfast", "Dessert", "Baking"],
+  ingredients: [
+    "1 cup all-purpose flour",
+    "2 eggs",
+    "1 cup milk",
+    "2 bananas, sliced",
+    "2 tbsp butter",
+    "2 tbsp maple syrup",
+    "A pinch of salt",
+    "1 tsp vanilla extract"
+  ],
+  instructions: [
+    "Whisk flour, eggs, milk, salt, and vanilla to form a thin batter.",
+    "Cook crepes in a lightly buttered non-stick pan; set aside.",
+    "In the same pan, sauté banana slices in butter and maple syrup until caramelized.",
+    "Fill each crepe with caramelized bananas, fold, and serve warm."
+  ]
+}
 ];
 
 export const categories = [
@@ -608,6 +1453,7 @@ export const categories = [
   "Italian",
   "Asian",
   "Mexican",
+  "Polish",
   "Thai"
 ];
 
