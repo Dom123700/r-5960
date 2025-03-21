@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Clock, Users, ChefHat, ArrowLeft } from 'lucide-react';
+import { Clock, Users, ChefHat, ArrowLeft, Bookmark } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { CategoryChip } from './CategoryChip';
 import { Recipe } from '@/data/recipes';
@@ -38,7 +38,9 @@ export const RecipeDetail: React.FC<RecipeDetailProps> = ({ recipe, className })
         <img 
           src={recipe.image} 
           alt={recipe.name} 
-          className="w-full h-auto object-cover max-h-[500px]" 
+          className="w-full h-auto object-cover max-h-[500px]"
+          loading="eager" 
+          decoding="async"
         />
       </div>
       
@@ -70,15 +72,23 @@ export const RecipeDetail: React.FC<RecipeDetailProps> = ({ recipe, className })
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="md:col-span-1">
-          <h2 className="text-xl font-medium mb-4">Ingredients</h2>
-          <ul className="space-y-2">
+          <h2 className="text-xl font-medium mb-4 flex items-center">
+            <Bookmark size={18} className="text-primary mr-2" />
+            Ingredients
+          </h2>
+          <div className="space-y-3">
             {recipe.ingredients?.map((ingredient, index) => (
-              <li key={index} className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span>{ingredient}</span>
-              </li>
+              <div 
+                key={index} 
+                className="p-3 rounded-lg border border-border/50 bg-white shadow-sm hover:shadow-md transition-all"
+              >
+                <div className="flex items-start">
+                  <span className="text-primary mr-2 mt-0.5">•</span>
+                  <span>{ingredient}</span>
+                </div>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
         
         <div className="md:col-span-2">

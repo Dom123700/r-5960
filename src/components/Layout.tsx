@@ -107,18 +107,34 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       </main>
       
       <footer className="pt-20 pb-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-background to-accent/30 -z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/30 to-accent/30 -z-10"></div>
         <div className="absolute top-0 left-0 right-0 h-24 bg-background" style={{ borderRadius: '0 0 50% 50% / 100px' }}></div>
         
+        {/* Decorative blobs */}
+        <div className="absolute -bottom-20 right-1/4 w-96 h-96 rounded-full bg-primary/20 blur-3xl -z-5"></div>
+        <div className="absolute bottom-40 -left-20 w-80 h-80 rounded-full bg-secondary/30 blur-3xl -z-5"></div>
+        
         <div className="container mx-auto px-4 mt-12 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="text-center mb-16 max-w-2xl mx-auto">
+            <div className="inline-flex items-center justify-center p-4 bg-white/80 backdrop-blur-md rounded-2xl mb-6 shadow-md">
+              <BookOpen className="h-6 w-6 text-primary" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500">
+              Mama's Recipes
+            </h2>
+            <p className="text-muted-foreground">
+              Discover delicious, home-cooked recipes passed down through generations
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 bg-white/50 backdrop-blur-sm p-8 rounded-2xl shadow-md">
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <BookOpen size={24} className="text-primary" />
-                <h3 className="text-2xl font-bold font-display">Recipe Collection</h3>
+                <h3 className="text-2xl font-bold font-display">Mama's Recipes</h3>
               </div>
               <p className="text-muted-foreground">
-                Your personal space for culinary inspiration and organization
+                Your personal space for culinary inspiration and family traditions
               </p>
             </div>
             
@@ -134,13 +150,13 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="space-y-4">
               <h4 className="text-lg font-semibold">Connect</h4>
               <div className="flex space-x-4">
-                <a href="#" className="p-3 rounded-full bg-white/80 shadow-sm text-primary hover:bg-primary hover:text-white">
+                <a href="#" className="p-3 rounded-full bg-white/80 shadow-sm text-primary hover:bg-primary hover:text-white transition-all">
                   <Instagram size={18} />
                 </a>
-                <a href="#" className="p-3 rounded-full bg-white/80 shadow-sm text-primary hover:bg-primary hover:text-white">
+                <a href="#" className="p-3 rounded-full bg-white/80 shadow-sm text-primary hover:bg-primary hover:text-white transition-all">
                   <Twitter size={18} />
                 </a>
-                <a href="#" className="p-3 rounded-full bg-white/80 shadow-sm text-primary hover:bg-primary hover:text-white">
+                <a href="#" className="p-3 rounded-full bg-white/80 shadow-sm text-primary hover:bg-primary hover:text-white transition-all">
                   <Facebook size={18} />
                 </a>
               </div>
@@ -148,7 +164,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
           
           <div className="border-t border-border/30 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Recipe Collection. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Mama's Recipes. All rights reserved.</p>
             <div className="flex items-center gap-2 text-sm text-muted-foreground mt-4 md:mt-0">
               <span>Made with</span>
               <Heart size={14} className="text-destructive fill-destructive" />

@@ -12,7 +12,7 @@ const RecipeView = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   
   useEffect(() => {
-    // Simulate data loading
+    // Simulate data loading but make it faster
     setIsLoading(true);
     setTimeout(() => {
       if (id) {
@@ -20,7 +20,7 @@ const RecipeView = () => {
         setRecipe(foundRecipe);
       }
       setIsLoading(false);
-    }, 300);
+    }, 150); // Reduced from 300ms to 150ms for faster loading
   }, [id]);
   
   // Redirect if recipe not found
