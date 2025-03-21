@@ -1,69 +1,75 @@
-# Welcome to your Lovable project
+# Welcome to Mama's Recipes!
 
-## Project info
+Mama's Recipes is your go-to hub for discovering and sharing mouth-watering recipes from around the globe. Whether you're a seasoned chef or a home cook, our website makes it easy to explore diverse cuisines, find inspiration for your next meal, and save your favorites for later.
 
-**URL**: https://lovable.dev/projects/c5e0ffc5-c58f-4165-aecb-cd7b0c85320b
+## Features
 
-## How can I edit this code?
+- **Diverse Recipe Collection:** Explore recipes across categories like Breakfast, Lunch, Dinner, Dessert, and more—including international and traditional dishes.
+- **User-Friendly Interface:** Effortlessly search by recipe name, ingredients, or category.
+- **Recipe Categories:** Filter recipes by type such as Italian, Thai, Polish, Healthy, Vegan, etc.
+- **Favorite Recipes:** Mark and save your go-to recipes for quick access.
+- **Responsive Design:** Enjoy a seamless browsing experience on desktops, tablets, and mobile devices.
 
-There are several ways of editing your application.
+## Getting Started
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c5e0ffc5-c58f-4165-aecb-cd7b0c85320b) and start prompting.
+- A modern web browser (Chrome, Firefox, Safari, etc.)
+- Node.js (if you wish to run a development server or contribute)
 
-Changes made via Lovable will be committed automatically to this repo.
+### Installation
 
-**Use your preferred IDE**
+1. **Clone the repository:**
+   ```
+   git clone https://github.com/yourusername/mamas-recipes.git
+   ```
+2. **Navigate to the project directory:**
+   ```
+   cd mamas-recipes
+   ```
+3. **Install dependencies (if applicable):**
+   ```
+   npm install
+   ```
+4. **Run the development server:**
+   ```
+   npm start
+   ```
+5. **Open your browser and visit:**
+   ```
+   http://localhost:3000
+   ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Usage
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Browse Recipes:** Visit the homepage to view a curated selection of recipes.
+- **Search:** Use the search bar to find recipes by keywords, ingredients, or categories.
+- **Filter:** Easily filter recipes based on your meal type or dietary preferences.
+- **View Details:** Click on a recipe to see detailed instructions, ingredients, and preparation steps.
+- **Favorites:** Save your favorite recipes for quick future access.
 
-Follow these steps:
+## Contributing
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+We welcome contributions to Mama's Recipes! Follow these simple steps to contribute:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1. **Fork the repository.**
+2. **Create a new branch:**
+   ```
+   git checkout -b feature-branch
+   ```
+3. **Make your changes.**
+4. **Commit your changes:**
+   ```
+   git commit -m 'Add new feature'
+   ```
+5. **Push to your branch:**
+   ```
+   git push origin feature-branch
+   ```
+6. **Open a Pull Request** detailing your changes.
 
-# Step 3: Install the necessary dependencies.
-npm i
+## License
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+This project is licensed under the MIT License.
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c5e0ffc5-c58f-4165-aecb-cd7b0c85320b) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+### Happy Cooking and Enjoy Mama's Recipes!
