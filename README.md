@@ -106,15 +106,15 @@ export interface Recipe {
 
 The project is built using modern web technologies. Below is an overview:
 
-| Technology        | Description                                      | Version  |
-| ----------------- | ------------------------------------------------ | -------- |
-| **React**         | Frontend library for building UI components      | 18.x     |
-| **TypeScript**    | Superset of JavaScript with static type-checking   | 4.x      |
-| **Node.js**       | JavaScript runtime environment for development     | 14.x+    |
-| **Express.js**    | Web framework for Node.js                          | 4.x      |
-| **MongoDB**       | NoSQL database (optional for dynamic recipes)      | 4.x+     |
-| **SCSS/CSS3**     | Styling the web application                        | N/A      |
-| **Webpack**       | Module bundler for modern JavaScript applications  | 5.x      |
+| Technology        | Description                                      | Version  | Completed? |
+| ----------------- | ------------------------------------------------ | -------- | ---------- |
+| **React**         | Frontend library for building UI components      | 18.x     | ✅         |
+| **TypeScript**    | Superset of JavaScript with static type-checking   | 4.x      |-          |
+| **Node.js**       | JavaScript runtime environment for development     | 14.x+    |-          |
+| **Express.js**    | Web framework for Node.js                          | 4.x      |-          |
+| **MongoDB**       | NoSQL database (optional for dynamic recipes)      | 4.x+     |NO         |
+| **SCSS/CSS3**     | Styling the web application                        | N/A      |NO         |
+| **Webpack**       | Module bundler for modern JavaScript applications  | 5.x      |NO         |
 
 ---
 
