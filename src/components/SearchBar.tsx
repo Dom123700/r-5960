@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
@@ -27,15 +28,18 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   useEffect(() => {
     if (query.trim() && showSuggestions) {
       const timer = setTimeout(() => {
+        // First prioritize name matches
         const nameMatches = recipes.filter(recipe => 
           recipe.name.toLowerCase().includes(query.toLowerCase())
         );
         
+        // Then content/description matches, but exclude any that were already matched by name
         const contentMatches = recipes.filter(recipe => 
           !recipe.name.toLowerCase().includes(query.toLowerCase()) && 
           recipe.description.toLowerCase().includes(query.toLowerCase())
         );
         
+        // Combine results with name matches first
         const combinedResults = [...nameMatches, ...contentMatches];
         
         setSuggestions(combinedResults.slice(0, 5));
